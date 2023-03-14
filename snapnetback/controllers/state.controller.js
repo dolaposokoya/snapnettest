@@ -54,7 +54,7 @@ const getState = async (req, res) => {
 
 const getStates = async (req, res) => {
     try {
-        const response = await stateSchema.find().sort({ name: 1 })
+        const response = await stateSchema.find().sort({ name: 1 }).populate("lga")
         if (response) {
             statusMessages.SUCCESS_MSG.SUCCESS.data = response
             res.json(statusMessages.SUCCESS_MSG.SUCCESS)

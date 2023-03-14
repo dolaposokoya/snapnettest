@@ -5,7 +5,6 @@ const wardSchema = new Schema({
   name: {
     type: String,
   },
-  lga: { type: mongoose.Schema.Types.ObjectId, ref: "lga" },
 },
   {
     versionKey: false,

@@ -7,6 +7,7 @@ const stateSchema = new Schema({
         required: false,
         unique: true,
     },
+    lga: [{ type: mongoose.Schema.Types.ObjectId, ref: "lga" }],
 },
     {
         versionKey: false,

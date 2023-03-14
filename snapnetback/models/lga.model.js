@@ -7,7 +7,7 @@ const lgaSchema = new Schema({
     required: false,
     unique: false,
   },
-  state: { type: mongoose.Schema.Types.ObjectId, ref: "state" },
+  wards: [{ type: mongoose.Schema.Types.ObjectId, ref: "ward" }],
 },
   {
     versionKey: false,
